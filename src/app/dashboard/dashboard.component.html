@@ -1,0 +1,83 @@
+<body>
+    <mat-card class="blacky">
+        <b><span>Dashboard</span></b>
+    </mat-card>
+    <br>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h2 class="title">Total Cards Payment:</h2>
+                <h1 class="number">{{data?.cards}}</h1>
+               
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 class="title">Total online payment:</h2>
+                <h1 class="number">{{data?.online}}</h1>
+                
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 class="title">Total Cash payment</h2>
+                <h1 class="number">{{data?.cash}}</h1>
+              
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h2 class="title"> Categories :</h2>
+                <h1 class="number">{{data?.category}}</h1>
+                <!-- <button class="button blacky" [routerLink]="['/cafe/category']">Categories</button> -->
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 class="title"> Foods:</h2>
+                <h1 class="number">{{data?.product}}</h1>
+                <!-- <button class="button blacky" [routerLink]="['/cafe/product']">Products</button> -->
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 class="title">Staff</h2>
+                <h1 class="number">{{data?.Staff}}</h1>
+                <!-- <button class="button blacky" [routerLink]="['/cafe/user']">Order</button> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h2 class="title"> Bills:</h2>
+                <h1 class="number">{{data?.bill}}</h1>
+                <!-- <button class="button blacky" [routerLink]="['/cafe/bill']">Bills</button> -->
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h2 class="title"> Orders:</h2>
+                <h1 class="number">{{data?.Orders}}</h1>
+                <!-- <button class="button blacky" [routerLink]="['/cafe/kitchen']">Order</button> -->
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h2 class="title"> Total Payment:</h2>
+                <h1 class="number">{{data?.totalPayment}}</h1>
+                <!-- <button class="button blacky" [routerLink]="['/cafe/dashboard']">payments</button> -->
+            </div>
+        </div>
+    
+    </div>
+
+   
+
+
+</body>

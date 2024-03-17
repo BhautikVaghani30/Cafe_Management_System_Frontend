@@ -1,0 +1,58 @@
+<mat-card class="main-card">
+    <b><span>Manage Users</span></b>
+</mat-card>
+
+<div class="spacer"></div>
+
+<mat-card class="filter mat-elevation-z0">
+    <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" #input>
+    </mat-form-field>
+</mat-card>
+
+<div class="spacer"></div>
+
+<div class="responsive-table">
+    
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+        <ng-container matColumnDef="contactNumber">
+            <th mat-header-cell *matHeaderCellDef>Contact Number</th>
+            <td mat-cell *matCellDef="let element">{{element.contactNumber}}</td>
+        </ng-container>
+        <!-- <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef>Staf Role</th>
+            <td mat-cell *matCellDef="let element">{{element.role}}</td>
+        </ng-container> -->
+        <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef>Staff Role</th>
+            <td mat-cell *matCellDef="let element">
+                <mat-form-field>
+                    <!-- <mat-label>Role</mat-label> -->
+                    <mat-select [(value)]="element.role" (selectionChange)="updateUserRole(element)">
+                        <mat-option value="user">Waiter</mat-option>
+                        <mat-option value="cook">Cook</mat-option>
+                        <mat-option value="admin">Admin</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element" class="action-link">
+                <mat-slide-toggle (change)="onChange($event.checked, element.id)" matTooltip="Activate or Deactivate User" [checked]="element.status"></mat-slide-toggle>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+        <tr mat-row *matRowDef="let row; columns:displayedColumns"></tr>
+    </table>
+</div>

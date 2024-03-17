@@ -1,0 +1,149 @@
+// .position-relative {
+// 	position: relative;
+// }
+
+// mat-card {
+//   background-color: #804a24;
+//   color: white;
+//   font-size: 20px;
+//   text-align: center;
+// }
+
+// body {
+//   font-family: Poppins, sans-serif;
+//   margin: 0;
+// }
+  
+// .row {
+//   margin: 15px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .column {
+//   float: left;
+//   width: 31.5%;
+//   margin-right: 10px;
+//   margin-left: 10px;
+// }
+
+// .card {
+//   width: 100%;
+//   height: 100%;
+//   border: 2px solid black;
+//   border-radius: 5px;
+// }
+ 
+// .title {
+//   padding-top: 10px;
+//   color: #1E1D1D;
+//   font-size: 15px;
+//   text-align: center !important;
+// }
+
+// .number {
+//   color: #1E1D1D;
+//   padding-bottom: 10px;
+//   text-align: center !important;
+// }
+  
+// .button {
+//   border: none;
+//   outline: 0;
+//   display: inline-block;
+//   padding: 10px;
+//   font-family: Poppins, sans-serif;
+//   color: #fff;
+//   background-color: #a1887f;
+//   text-align: center;
+//   cursor: pointer;
+//   width: 100%;
+//   border-bottom-left-radius: 3px;
+//   border-bottom-right-radius: 3px;
+//   transition: all .5s ease;
+// }
+  
+// .button:hover {
+//   background-color: #8d6e63;
+// }
+// .blacky{
+//   background : linear-gradient( to top ,black,rgb(86, 86, 86));
+// }
+body{
+  position: relative;
+  width: 75%fit-content;
+}
+.blacky {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  // box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.card:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;  transition: 0.5s;
+}
+.title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 600) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+
+  .title {
+    padding-top: 10px;
+    color: #1E1D1D;
+    font-size: 11px;
+    text-align: center !important;
+  }
+  
+  .number {
+    color: #1E1D1D;
+    padding-bottom: 10px;
+    text-align: center !important;
+  }
+}

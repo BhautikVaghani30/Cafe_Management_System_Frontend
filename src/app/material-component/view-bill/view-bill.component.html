@@ -1,0 +1,74 @@
+<mat-card class="main-card blacky" >
+  <b><span>View Bills</span></b>
+</mat-card>
+<div class="spacer"></div>
+<mat-card class="filter mat-elevation-z0">
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" #input />
+  </mat-form-field>
+</mat-card>
+<div class="spacer"></div>
+<div class="responsive-table">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="uuid">
+      <th mat-header-cell *matHeaderCellDef id="bill_field">Bill_Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.uuid }}</td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef id="bill_field">Customer Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+    <ng-container matColumnDef="contactNumber">
+      <th mat-header-cell *matHeaderCellDef id="bill_field">Contact Number</th>
+      <td mat-cell *matCellDef="let element">{{ element.contactNumber }}</td>
+    </ng-container>
+    <ng-container matColumnDef="paymentMethod">
+      <th mat-header-cell *matHeaderCellDef id="bill_field">Payment Method</th>
+      <td mat-cell *matCellDef="let element">{{ element.paymentMethod }}</td>
+    </ng-container>
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef id="bill_field">Total</th>
+      <td mat-cell *matCellDef="let element">₹{{ element.total }}/-</td>
+    </ng-container>
+    <ng-container matColumnDef="view">
+      <th mat-header-cell *matHeaderCellDef id="bill_field">Action</th>
+      <td mat-cell *matCellDef="let element" class="action-link">
+        <!-- <button
+          mat-icon-button
+          color="primary"
+          matTooltip="Edit Bill"
+          (click)="handleEditAction(element)"
+        >
+          <mat-icon>edit</mat-icon>
+        </button> -->
+        <button
+          mat-icon-button
+          color="primary"
+          matTooltip="View Bill"
+          (click)="handleViewAction(element)"
+        >
+          <mat-icon>visibility</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="primary"
+          matTooltip="Download Bill"
+          (click)="handleDownloadAction(element)"
+        >
+          <mat-icon>save_alt</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="primary"
+          matTooltip="Delete Bill"
+          (click)="handleDeleteAction(element)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

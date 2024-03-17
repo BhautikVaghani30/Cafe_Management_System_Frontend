@@ -1,0 +1,28 @@
+mat-toolbar{
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
+  &.topbar{
+    padding: 15px;
+  }
+  .navbar-header {
+    width: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.topbar {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.example-sidenav-container {
+  flex: 1;
+}
+
+.example-sidenav-container {
+  flex: 1 0 auto;
+}
+

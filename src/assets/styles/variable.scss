@@ -1,0 +1,101 @@
+// $bodyfont: 'Poppins', sans-serif;
+// $headingfont: 'Poppins', sans-serif;
+
+// @import '~@angular/material/theming';
+
+// $primary: mat-palette($mat-brown, 800);
+// $accent: mat-palette($mat-brown, 800);
+// $warn: mat-palette($mat-red, 800);
+// $theme: mat-light-theme($primary, $accent, $warn);
+// $background: map-get($theme, background);
+// $foreground: map-get($theme, foreground);
+
+// @include mat-core();
+
+// $custom-typography: mat-typography-config(
+//   $font-family: 'Poppins, sans-serif'
+// );
+
+// // override the typography in the core CSS.
+// @include mat-core($custom-typography);
+
+// // default Theme
+// @include angular-material-theme($theme);
+
+// $sidebar: #fff;
+// $sidebar-white: #fff;
+// $sidebar-alt: #fff;
+// $bodycolor: #fff;
+// $headingtext: #455a64;
+// $bodytext: #67757c;
+// $sidebar-text: black;
+// $font-16: 16px;
+// $light-text: #fff;
+// $themecolor: black;
+// $themecolor-alt: black;
+// $themecolor-dark: black;
+// $inverse: #fff;
+// $white: #fff;
+// $rgt: right;
+// $lft: left;
+// $border: rgba(120, 130, 140, 0.13);
+// $table-border: #fff;
+// $card-brd: #fff;
+// $dark-text: #848a96;
+// $radius: 4px;
+// $form-brd: #fff;
+
+// Import Angular Material theming
+@import '~@angular/material/theming';
+
+// Define variables
+$bodyfont: 'Poppins', sans-serif;
+$headingfont: 'Poppins', sans-serif;
+
+// Material color palette definitions
+$primary: mat-palette($mat-brown, 800);
+$accent: mat-palette($mat-brown, 800);
+$warn: mat-palette($mat-red, 800);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+// Get background and foreground colors from the theme
+$background: map-get($theme, background);
+$foreground: map-get($theme, foreground);
+
+// Include core Angular Material styles
+@include mat-core();
+
+// Define custom typography
+$custom-typography: mat-typography-config(
+  $font-family: 'Poppins, sans-serif'
+);
+
+// Override core typography with custom settings
+@include mat-core($custom-typography);
+
+// Apply Angular Material theme
+@include angular-material-theme($theme);
+
+// Other custom variables
+$sidebar: #fff;
+$sidebar-white: #fff;
+$sidebar-alt: #fff;
+$bodycolor: #fff;
+$headingtext: #455a64;
+$bodytext: #67757c;
+$sidebar-text: black;
+$font-16: 16px;
+$light-text: #fff;
+$themecolor: black;
+$themecolor-alt: black;
+$themecolor-dark: black;
+$inverse: #fff;
+$white: #fff;
+$rgt: right;
+$lft: left;
+$border: rgba(120, 130, 140, 0.13);
+$table-border: #fff;
+$card-brd: #fff;
+$dark-text: #848a96;
+$radius: 10px;
+$form-brd: #fff;

@@ -1,0 +1,41 @@
+.mat-toolbar {
+    margin: -24px;
+    margin-bottom: 0;
+    width: auto;
+    margin-bottom: 10PX;
+}
+  
+mat-form-field{
+    padding: 5px;
+}
+    
+mat-card{
+  padding: 20px;
+}
+    
+table {
+  width: 100%;
+  border: 2px solid #a1887f;
+}
+.bigname{
+  font-size: xx-large;
+}
+#customers {
+  font-family: Poppins, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+   
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+      
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
